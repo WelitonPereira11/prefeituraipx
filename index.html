@@ -6,12 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canal de Denúncias - Prefeitura de Ipixuna do Pará</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function alterarEmail() {
+            // Pega o valor da secretaria selecionada
+            var secretaria = document.getElementById('secretaria').value;
+
+            // Define o mapa de secretarias e seus respectivos e-mails
+            var emails = {
+                'obras': 'digio1147@gmail.com',
+                'educacao': 'digio1147@gmail.com',
+                'saude': 'digio1147@gmail.com'
+                // Adicione mais secretarias e e-mails conforme necessário
+            };
+
+            // Altera o action do formulário com base na secretaria escolhida
+            var form = document.getElementById('denuncia-form');
+            if (emails[secretaria]) {
+                form.action = 'https://formsubmit.co/' + emails[secretaria];
+            } else {
+                form.action = ''; // Se nenhuma secretaria for escolhida, o form não tem action
+            }
+        }
+    </script>
 </head>
 <body>
     <!-- Cabeçalho do site -->
     <header>
         <!-- Logo à esquerda fora do contêiner -->
-        <img src="/logoesqueda.png" alt="Logo Esquerda" class="logo logo-esquerda">
+        <img src="logoesqueda.png" alt="Logo Esquerda" class="logo logo-esquerda">
         
         <!-- Contêiner principal do cabeçalho -->
         <div class="container">
@@ -26,7 +48,7 @@
     <!-- Seção do Formulário de Denúncias -->
     <main>
         <div class="container">
-            <form id="denuncia-form" enctype="multipart/form-data" action="processa_denuncia.php" method="post">
+            <form id="denuncia-form" enctype="multipart/form-data" method="post" onsubmit="alterarEmail()">
                 <!-- Campo Nome -->
                 <div class="form-group">
                     <label for="nome">Nome (Opcional):</label>
@@ -48,7 +70,7 @@
                 <!-- Campo Secretaria -->
                 <div class="form-group">
                     <label for="secretaria">Secretaria Responsável:</label>
-                    <select id="secretaria" name="secretaria" required>
+                    <select id="secretaria" name="secretaria" required onchange="alterarEmail()">
                         <option value="">Selecione a Secretaria</option>
                         <option value="obras">Secretaria de Obras</option>
                         <option value="educacao">Secretaria de Educação</option>
