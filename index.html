@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canal de Denúncias - Prefeitura de Ipixuna do Pará</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Logo à esquerda fora do contêiner -->
+        <img src="C:\Users\01\Documents\prefeitura/logoesqueda.png" alt="Logo Esquerda" class="logo logo-esquerda">
+        
+        <!-- Contêiner principal do cabeçalho -->
+        <div class="container">
+            <h1>Canal de Denúncias</h1>
+            <p>Bem-vindo ao canal de denúncias da Prefeitura de Ipixuna do Pará. Aqui você pode reportar problemas em nossa cidade para que possamos tomar as devidas providências.</p>
+        </div>
+        
+        <!-- Logo à direita fora do contêiner -->
+        <img src="logo-direita.png" alt="Logo Direita" class="logo logo-direita">
+    </header>
+
+    <!-- Seção do Formulário de Denúncias -->
+    <main>
+        <div class="container">
+            <form id="denuncia-form" enctype="multipart/form-data" action="processa_denuncia.php" method="post">
+                <!-- Campo Nome -->
+                <div class="form-group">
+                    <label for="nome">Nome (Opcional):</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                </div>
+
+                <!-- Campo Telefone -->
+                <div class="form-group">
+                    <label for="telefone">Telefone de Contato:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+
+                <!-- Campo E-mail -->
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
+                </div>
+
+                <!-- Campo Secretaria -->
+                <div class="form-group">
+                    <label for="secretaria">Secretaria Responsável:</label>
+                    <select id="secretaria" name="secretaria" required>
+                        <option value="">Selecione a Secretaria</option>
+                        <option value="obras">Secretaria de Obras</option>
+                        <option value="educacao">Secretaria de Educação</option>
+                        <option value="saude">Secretaria de Saúde</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                </div>
+
+                <!-- Campo Descrição da Denúncia -->
+                <div class="form-group">
+                    <label for="descricao">Descrição da Denúncia:</label>
+                    <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva o problema aqui..." required></textarea>
+                </div>
+
+                <!-- Campo de Anexos -->
+                <div class="form-group">
+                    <label for="anexo">Anexar Foto ou Vídeo:</label>
+                    <input type="file" id="anexo" name="anexo" accept="image/*,video/*">
+                </div>
+
+                <!-- Botão de Envio -->
+                <button type="submit">Enviar Denúncia</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Prefeitura de Ipixuna do Pará. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
