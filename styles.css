@@ -7,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Container principal para centralizar o conteúdo */
 .container {
     width: 90%;
     max-width: 800px;
@@ -14,17 +15,18 @@ body {
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Cabeçalho */
 header {
     position: relative;
-    background-color: #388E3C; /* Azul escuro */
-    color: #000000;
+    background-color: #388E3C; /* Verde */
+    color: #388E3C;
     padding: 20px 0;
     text-align: center;
     margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -36,7 +38,7 @@ header .container {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 150px; /* Tamanho ajustável da logo */
+    width: 120px; /* Tamanho ajustável da logo */
     height: auto;
 }
 
@@ -45,12 +47,19 @@ header .container {
 }
 
 .logo-direita {
-    right: 80px;
+    right: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
 }
 
 /* Estilos do Formulário */
@@ -68,7 +77,7 @@ label {
     font-weight: bold;
     margin-bottom: 5px;
     display: block;
-    color: #388E3C; /* Azul escuro */
+    color: #388E3C; /* Verde */
 }
 
 input[type="text"],
@@ -76,8 +85,8 @@ input[type="tel"],
 input[type="email"],
 textarea,
 select {
-    width: 100%;
-    padding: 10px;
+    width: 95%;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
@@ -90,23 +99,63 @@ textarea {
 button {
     background-color: #388E3C; /* Verde */
     color: #ffffff;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
     background-color: #2E7D32; /* Verde mais escuro */
+    transform: scale(1.05);
 }
 
 /* Rodapé */
 footer {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #666;
     padding: 10px 0;
     text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+/* Menu Horizontal */
+nav {
     margin-top: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #ffffff; /* Cor do texto branco */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #2E7D32; /* Cor do hover - verde escuro */
+}
+
+
+/* pagina desenvolvimento*/
+.titulo {
+text-align: center;
+color: #2E7D32;
+
 }
