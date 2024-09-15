@@ -1,10 +1,4 @@
 
-.titulo {
-    text-align: center;
-    color: #2E7D32;
-    
-    }
-    
 /* Estilos Globais */
 body {
     font-family: 'Arial', sans-serif;
@@ -139,7 +133,8 @@ nav {
     display: flex;
     align-items: center;
     width: 85%;
-    max-width: 99%;
+    max-width: 95%;
+    height: 150px;
     margin: 0 auto;
     padding: 60px;
     background-color: #f1f8e9;
@@ -153,32 +148,15 @@ nav {
 }
 
 .divdepoimento p {
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 20px;
+    margin-bottom: 20px;
     text-align: justify;
 }
-
-
-.divdepoimento2 {
-    display: flex;
-    align-items: center;
-    width: 85%;
-    max-width: 99%;
-    height: 150px; /* Ajusta a altura */
-    margin: 0 auto;
-    padding: 60px;
-    background-color: #e8f5e9; /* Verde claro */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.divdepoimento video {
+    width: 35%;
+    height: auto; /* Mantém a proporção do vídeo */
+    margin-right: 20px;
+    margin-left: 0px;
 }
 
-.divdepoimento2 h2 {
-    font-size: 30px;
-    margin-left: 20px;
-}
-
-.divdepoimento2 p {
-    font-size: 20px;
-    margin-left: 20px;
-    text-align: justify;
-}
